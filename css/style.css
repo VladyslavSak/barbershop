@@ -1,0 +1,365 @@
+/*SPECIFICATION*/
+body {
+	padding: 0;
+	margin: 0;
+	color: #fff;
+	font-family: 'Signika Negative', sans-serif;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, p, div {
+	margin: 0;
+	padding: 0;
+}
+
+div, input, a {
+	box-sizing: border-box;
+}
+
+ul, li, span, input {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.d-flex {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.title {
+	font-weight: 700;
+	font-size: 36px;
+	color: #1a0f0f;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+/*BUTTONS*/
+.btn {
+	display: block;
+	width: 140px;
+	padding: 10px 0;
+	text-align: center;
+	background-color: #9e2d2d;
+	border-radius: 10px;
+	font-weight: 700;
+}
+
+.header_buttons .btn {
+	margin-left: 20px;
+}
+
+.btn__view {
+	background: transparent;
+	border: 1px solid #fff;
+}
+
+.callmeback__btn {
+	padding: 12px 48px;
+	border-radius: 7px;
+	border: none;
+	background-color: #9e2d2d;
+	color: #fff;
+	font-weight: 700;
+	margin-top: 84px;
+	margin-left: 16px;
+	width: 184px;
+}
+
+.callmeback__btn:hover {
+	background-color: #8B0000;
+	cursor: pointer;
+}
+
+.btn__book:hover {
+	background-color: #8B0000;
+}
+
+.btn__view:hover {
+	background-color: #fff;
+	color: #2a1818;
+}
+
+/*HEADER*/
+
+.header {
+	height: 750px;
+	background: url(../image/first_screen.png) no-repeat center center;
+	background-size: cover;
+	padding-top: 10px;
+	padding-bottom: 200px;
+}
+
+.logo {
+	width: 53px;
+	height: 60px;
+	margin: 0 auto;
+	margin-top: 15px;
+}
+
+.offer {
+	text-align: center;
+	margin-top: 340px;
+}
+
+.offer__title {
+	font-weight: 700;
+	font-size: 48px;
+	margin-bottom: 45px;
+	line-height: 0;
+}
+
+.offer__text {
+	width: 615px;
+	margin: 0 auto;
+	line-height: 24px;
+}
+
+.header_buttons {
+	justify-content: center;
+	margin-top: 33px;
+}
+
+/*OUR SERVICES*/
+.our_services {
+	padding-top: 63px;
+	padding-bottom: 72px;
+	background-color: #dadada;
+}
+
+.title_services {
+	margin-bottom: 40px;
+}
+.services {
+	position: relative;
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.services__wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #2a1818;
+	display: flex;
+	opacity: 0;
+	border-radius: 7px;
+	height: 286px;
+	width: 286px;
+	margin-left: 4px;
+	margin-top: 3px;
+}
+
+.services__desc {
+	text-align: center;
+	padding-top: 40px;
+}
+
+.services__desc-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.services__desc-text {
+	width: 258px;
+	margin-left: 14px;
+	font-size: 15px;
+}
+
+.desc__logo {
+	margin-top: 20px;
+}
+
+.services:hover .services__wrap{
+	opacity: 0.8;
+}
+
+.services_img {
+	height: 296px;
+	width: 296px;
+}
+
+
+.button__services {
+	justify-content: center;
+	margin-top: 40px;
+}
+
+/*FREE DRINKS*/
+.free_drinks {
+	padding: 60px 0;
+}
+
+.drinks__images {
+	position: relative;
+	margin-right: 18px;
+}
+
+.circle {
+	position: absolute;
+	top: -33px;
+	left: -33px;
+}
+
+.drinks__desc {
+	background: url(../image/Mr.BarberShop.png) no-repeat top center;
+}
+
+.drinks__text {
+	text-align: center;
+	color: #000000;
+	margin-top: 105px;
+	font-size: 16px;
+	width: 460px;
+	line-height: 1.5;
+}
+
+/*BARBERS*/
+.our_barbers {
+	background-color: #554646;
+	padding: 60px 0;
+}
+
+.title__barbers {
+	font-weight: 700;
+	font-size: 36px;
+	text-align: center;
+	color: #fff;
+}
+
+.barbers, .barbers__gallery {
+	position: relative;
+}
+
+.barbers__wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #2a1818;
+	display: flex;
+	opacity: 0;
+	height: 395px;
+	width: 327px;
+}
+
+.barbers__desc {
+	text-align: center;
+	padding-top: 146px;
+	margin-left: 34px;
+}
+
+.barbers__desc-title {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+.barbers__desc-text {
+	width: 255px;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.barbers:hover .barbers__wrap{
+	opacity: 0.8;
+}
+
+.arrow-right {
+	position: absolute;
+	height: 52px;
+	width: 52px;
+	opacity: 0.8;
+	top: 175px;
+	left: 955px;
+}
+
+.arrow-left {
+	position: absolute;
+	transform: scale(-1, 1);
+	height: 52px;
+	width: 52px;
+	opacity: 0.8;
+	top: 170px;
+	left: -25px;
+}
+
+/*CONTACTS*/
+.contacts {
+	padding: 60px 0;
+}
+
+.map_barber {
+	margin-right: 80px;
+	border-radius: 7px;
+}
+
+.adress, .phones {
+	margin: 0 auto;
+	color: #1a0f0f;
+	text-align: center;
+}
+
+.adress {
+	width: 230px;
+	margin-bottom: 30px;
+}
+
+.phones {
+	width: 257px;
+	margin-bottom: 20px;
+}
+
+.callmeback {
+	border: 1px solid #aaa2a2;
+	border-radius: 15px;
+	padding: 25px 0;
+	width: 218px;
+	margin: 0 auto;
+}
+
+.callmeback input {
+	width: 184px;
+	padding: 12px 0;
+	outline: none;
+	padding-left: 17px;
+	border-radius: 7px;
+	border: 1px solid #aaa2a2;
+	margin-bottom: 7px;
+	margin-left: 16px;
+}
+
+/*FOOTER*/
+.footer {
+	background: url(../image/footer.png);
+	padding: 35px 0; 
+}
+
+.rights {
+	text-align: center;
+	color: #bfbbbb;
+}
+.social {
+	justify-content: center;
+}
+
+.social__item {
+	margin-right: 10px;
+	margin-top: 15px;
+}
+
+.social__item:hover {
+	opacity: 0.8;
+}
