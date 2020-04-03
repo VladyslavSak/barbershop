@@ -3,39 +3,53 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mr.Barbershop</title>
-	<base href="file:///D:/Робота/BarberShop/BarberShop_site/">
 	<link href="https://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700" rel="stylesheet">
+	<script src="js/lib.js"></script>
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<div class="nav">
-		<ul id="nav">
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Barbers</a></li>
-			<li><a href="#">Price</a></li>
-			<li><a href="#">Contacts</a></li>
-		</ul>
-	</div>
 	<header class="header">
 		<div class="container">
-				<img src="image/logo.png" alt="Mr.Barbershop" class="logo d-flex">
-			<div class="offer">
-				<h1 class="offer__title">
-					Your perfect hairstyle is our job
-				</h1>
-				<p class="offer__text">
-					When you visit our barbershop, you will understand what it is like to be "our man". Our barber is not just a hairdresser who comes for a haircut, but also a buddy, for whose work you can skip a glass of old Jack's, discussing politics or football.
-				</p>
+			<div class="nav">
+				<ul id="nav">
+					<li>
+						<a href="#services">Services</a>
+					</li>
+					<li>
+						<a href="#barbers">Barbers</a>
+					</li>
+					<li>
+						<a href="#"><img src="image/logo.png" alt="Mr.Barbershop" class="logo d-flex"></a>
+					</li>
+					<li>
+						<a href="#about">About us</a>
+					</li>
+					<li>
+						<a href="#contacts">Contacts</a>
+					</li>
+				</ul>
 			</div>
-			<div class="header_buttons d-flex">
-				<a href="#" class="btn btn__book">Book now</a>
-				<a href="#" class="btn btn__view">View services</a>
+
+			<div class="offer d-flex">
+				<div class="offer__info">
+					<h1 class="offer__title">
+						Your perfect hairstyle is our job
+					</h1>
+					<p class="offer__text">
+						When you visit our barbershop, you will understand what it is like to be "our man". Our barber is not just a hairdresser who comes for a haircut, but also a buddy, for whose work you can skip a glass of old Jack's, discussing politics or football.
+					</p>
+				</div>
+
+				<div class="header_buttons d-flex">
+					<a href="#" class="btn btn__book">Book now</a>
+					<a href="#" class="btn btn__view">View services</a>
+				</div>
 			</div>
 		</div>
 	</header>
 
-	<section class="our_services">
+	<section class="our_services" id="services">
 		<div class="container">
 			<h2 class="title title_services">
 				Our services
@@ -44,9 +58,9 @@
 				<div class="services">
 					<div class="services__wrap">
 						<div class="services__desc">
-							<h6 class="services__desc-title">
+							<div class="services__desc-title">
 								Beard mowing
-							</h6>
+							</div>
 							<p class="services__desc-text">
 								The masters will tell you which shape is best for you depending on the geometry of the face and hair growth. A beard cut lasts 30 minutes and, in addition to working with scissors and a clipper, a barber will make you trim a dangerous razor.	
 							</p>
@@ -123,7 +137,8 @@
 				</div>							
 			</div>
 			<div class="d-flex button__services">
-				<a href="#" class="btn btn__book">book now</a>
+				<a href="#" class="btn btn__book">Book now</a>
+				<a href="#" class="btn btn__view">View prices</a>
 			</div>
 		</div>
 	</section>
@@ -131,12 +146,12 @@
 	<section class="free_drinks">
 		<div class="container">
 			<h2 class="title">
-				Free drinks for everyone
+				Drinks for everyone
 			</h2>
 			<div class="drinks__wrap d-flex">
 				<div class="drinks__images">
-					<img src="image/drinks.png" alt="Whiskey" class="whiskey">
-					<img src="image/circle.png" alt="nothing" class="circle">
+					<img src="image/wiski.png" alt="Whiskey" class="whiskey">
+					<img src="image/free%20mark.png" alt="nothing" class="circle">
 				</div>
 
 				<div class="drinks__desc">
@@ -149,76 +164,119 @@
 		</div>
 	</section>
 	
-	<section class="our_barbers">
+	<section class="our_barbers" id="barbers">
 		<div class="container">
 			<h2 class="title title__barbers">
 				Our barbers
 			</h2>
-			<div class="barbers__gallery d-flex">
+			<div id="barbersGallery" class="barbers__gallery d-flex">
 				<div class="barbers">
 					<div class="barbers__wrap">
 						<div class="barbers__desc">
-							<h6 class="barbers__desc-title">
-								Anastas
-							</h6>
+							<div class="barbers__desc-title">
+								Vlad
+							</div>
 							<p class="barbers__desc-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-							</p>			
+								I studied with my twin brother as a male master.  In Mr. Barber Shop, I learned the correct haircut and became more open, liberated. This is very cool, because cutting is in any case a creative and constructive process. I am glad that the team is very large – I have more than ten competitors – this helps to improve on a daily basis.
+							</p>
 						</div>
 					</div>
-					<img src="image/barber-1.png" alt="barbers" class="barbers_img">
+					<img src="image/barber1.jpg" alt="barbers" class="barbers_img">
 				</div>
 				<div class="barbers">
 					<div class="barbers__wrap">
 						<div class="barbers__desc">
-							<h6 class="barbers__desc-title">
-								Anastas
-							</h6>
+							<div class="barbers__desc-title">
+								Jan
+							</div>
 							<p class="barbers__desc-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-							</p>			
+								He graduated from the Kiev Academy of Hairdressing. The soul lay neither in chemistry, nor in mathematics, nor in any other exact science, so I decided to choose a profession for my own hands. Now I understand that this art requires much more than many sciences. Glad to be in my place.
+							</p>
 						</div>
 					</div>
-					<img src="image/barber-2.png" alt="barbers" class="barbers_img">
+					<img src="image/barber2.jpg" alt="barbers" class="barbers_img">
 				</div>
 				<div class="barbers">
 					<div class="barbers__wrap">
 						<div class="barbers__desc">
-							<h6 class="barbers__desc-title">
-								Anastas
-							</h6>
+							<div class="barbers__desc-title">
+								Max
+							</div>
 							<p class="barbers__desc-text">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
-							</p>			
+								My whole family is a hairdresser. I decided to believe in the power of the science of genetics. I prefer to set specific goals and achieve them. Moreover, I am a realist and I am able to enjoy things that for some may be too simple. But it is from the little things that the haircut, everyday life and life itself ultimately form. And I like everything in this state of things, I am in my place.
+							</p>
 						</div>
 					</div>
-					<img src="image/barber-3.png" alt="barbers" class="barbers_img">
+					<img src="image/barber3.jpg" alt="barbers" class="barbers_img">
 				</div>
-				<img src="image/arrow-left.png" alt="slider-right" class="arrow-right">
-				<img src="image/arrow-left.png" alt="slider-left" class="arrow-left">
+				<div class="barbers">
+					<div class="barbers__wrap">
+						<div class="barbers__desc">
+							<div class="barbers__desc-title">
+								Vlad
+							</div>
+							<p class="barbers__desc-text">
+								I studied with my twin brother as a male master.  In Mr. Barber Shop, I learned the correct haircut and became more open, liberated. This is very cool, because cutting is in any case a creative and constructive process. I am glad that the team is very large – I have more than ten competitors – this helps to improve on a daily basis.
+							</p>
+						</div>
+					</div>
+					<img src="image/barber4.jpg" alt="barbers" class="barbers_img">
+				</div>
+				<div class="barbers">
+					<div class="barbers__wrap">
+						<div class="barbers__desc">
+							<div class="barbers__desc-title">
+								Jan
+							</div>
+							<p class="barbers__desc-text">
+								He graduated from the Kiev Academy of Hairdressing. The soul lay neither in chemistry, nor in mathematics, nor in any other exact science, so I decided to choose a profession for my own hands. Now I understand that this art requires much more than many sciences. Glad to be in my place.
+							</p>
+						</div>
+					</div>
+					<img src="image/barber5.jpg" alt="barbers" class="barbers_img">
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="contacts">
+	<section class="contacts" id="contacts">
 		<div class="container">
 			<h2 class="title">
 				Contacts
 			</h2>
 			<div class="contacts__wrap d-flex">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.957655046354!2d30.545899115190124!3d50.44188939586357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfa5f59f846b%3A0xc874a622c4811258!2sBarbershop+Gentlemen&#39;s+Club!5e0!3m2!1sru!2sua!4v1552521159303" width="585" height="380" frameborder="0" style="border:0" allowfullscreen class="map_barber"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.957655046354!2d30.545899115190124!3d50.44188939586357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cfa5f59f846b%3A0xc874a622c4811258!2sBarbershop+Gentlemen&#39;s+Club!5e0!3m2!1sru!2sua!4v1552521159303" width="730" height="470" frameborder="0" style="border:0" allowfullscreen class="map_barber"></iframe>
 				<div class="form_callmeback">
-					<span class="adress">
+					<div class="address__wrap d-flex">
+						<span>Address:</span>
+						<span class="address">
 						Kiev, Lva Tolstoho st. 23/1  <br>
 						Kiev, Dniprovsʹka Naberezhna, 19
 					</span>
-					<span class="phones">
-						+380 95 228 54 11, +380 95 228 54 22 
-					</span>
-					<form action="#" class="callmeback">
-						<input type="text" id="name" placeholder="name">
-						<input type="tel" id="tel" placeholder="phone">
-						<button class="callmeback__btn">call me back</button>
+					</div>
+
+					<div class="phones__wrap d-flex">
+						<span>Phone:</span>
+						<span class="phones">
+							+380 95 228 54 11, +380 95 228 54 22
+						</span>
+					</div>
+
+					<form action="#" method="post" class="callmeback">
+						<h3 class="callmeback__title">Do you want us to call you back?</h3>
+						<div class="fieldset__item">
+							<input type="text" id="name" required>
+							<label for="name">Name*</label>
+						</div>
+						<div class="fieldset__item">
+							<input type="tel" id="tel" required>
+							<label for="tel">Phone*</label>
+						</div>
+						<div class="fieldset__item">
+							<textarea id="add" required></textarea>
+							<label for="add">Question</label>
+						</div>
+						<button type="submit" class="btn callmeback__btn">Call me back</button>
 					</form>
 				</div>
 			</div>
@@ -228,21 +286,22 @@
 	<footer class="footer">
 		<div class="container">
 			<span class="rights">
-				© «Mr. Barber Shop», 2019. All Rights Reserved
+				© «Mr. Barber Shop», 2020. All Rights Reserved
 			</span>
 			<div class="social d-flex">
 				<div class="social__item">
-					<a href="https://www.facebook.com/profile.php?id=100008955938586" target="_blank">
-						<img src="image/instagram.png" alt="instagram">
+					<a href="https://www.instagram.com/julia.samchuk/" target="_blank">
+						<img src="image/facebook.svg" alt="facebook">
 					</a>
 				</div>
 				<div class="social__item">
-					<a href="https://www.instagram.com/julia.samchuk/" target="_blank">
-						<img src="image/facebook.png" alt="facebook">
+					<a href="https://www.facebook.com/profile.php?id=100008955938586" target="_blank">
+						<img src="image/instagram.svg" alt="instagram">
 					</a>
 				</div>
 			</div>
 		</div>
 	</footer>
+	<script src="js/style.js"></script>
 </body>
 </html>
