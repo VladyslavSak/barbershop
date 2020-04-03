@@ -51,8 +51,8 @@ a {
 /*BUTTONS*/
 .btn {
 	display: block;
-	width: 140px;
-	padding: 10px 0;
+	width: 194px;
+	padding: 14px 0;
 	text-align: center;
 	background-color: #9e2d2d;
 	border-radius: 10px;
@@ -131,7 +131,7 @@ a {
 
 .header_buttons {
 	justify-content: center;
-	margin-top: 33px;
+	margin-top: 30px;
 }
 
 /*OUR SERVICES*/
@@ -165,7 +165,8 @@ a {
 }
 
 .services__desc {
-	text-align: center;
+	text-align: left;
+	line-height: 1.5;
 	padding-top: 40px;
 }
 
