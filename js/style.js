@@ -52,7 +52,6 @@ function closeModal ( modalID ) {
     const modal = document.getElementById(modalID);
 
     document.addEventListener('click', function(event) {
-        console.log(event.target);
        if ( event.target === buttonTriggerOut || event.target === wrapperOut || event.target === spanTrigger || event.target === spanTrigger2 ) {
            document.body.classList.remove('hidden');
            //Плавне зникання для нашої форми
@@ -171,3 +170,19 @@ priceList.forEach( item => {
             '</div>';
     }
 });
+
+/*
+** Scroll to top
+ */
+showScrollButton();
+window.addEventListener('scroll', showScrollButton);
+
+function showScrollButton() {
+    const buttonToTop = document.getElementById('scrollToTop').children[0];
+    const firstSectionHeight = document.getElementById('header').offsetHeight;
+    if (window.pageYOffset > firstSectionHeight) {
+        buttonToTop.classList.add('active');
+    } else {
+        buttonToTop.classList.remove('active');
+    }
+}
