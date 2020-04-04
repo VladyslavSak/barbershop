@@ -42,7 +42,7 @@ function modalInit( modalID, trigger ) {
 
 //Функція для зникнення модального вікна
 function closeModal ( modalID ) {
-    //Оголошуємо нашу елементи, що викликають зникнення вікна
+    //Оголошуємо наші елементи, що викликають зникнення вікна
     const buttonTriggerOut = document.getElementsByClassName('button--close')[0];
     const spanTrigger = document.getElementsByClassName('close-line')[0];
     const spanTrigger2 = document.getElementsByClassName('close-line')[1];
