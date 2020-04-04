@@ -42,6 +42,10 @@ ul, li, span, input {
 	display: flex;
 }
 
+.hidden {
+	overflow: hidden;
+}
+
 a {
 	text-decoration: none;
 	color: #fff;
@@ -74,6 +78,62 @@ section {
 	font-family: 'Signika Negative', sans-serif;
 	line-height: 20px;
 	transition: all .2s;
+}
+
+.button--close {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 15px;
+	right: 15px;
+	transition: .3s ease-in;
+	z-index: 101;
+}
+
+.button--close span {
+	height: 2px;
+	width: calc( 100% / 2 );
+	background-color: #9E2D2D;
+	position: absolute;
+	left: calc( 100% / 4);
+	top: 12px;
+	transition: background-color .3s;
+	z-index: 2;
+}
+
+.button--close:before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	transition: all 0.3s ease-in;
+	background-color: #9E2D2D;
+	opacity: 0;
+	z-index: 1;
+}
+
+.button--close:hover {
+	cursor: pointer;
+}
+
+.button--close:hover span {
+	background-color: #fff;
+}
+
+.button--close:hover:before {
+	opacity: 1;
+	height: 100%;
+}
+
+.button--close span:first-child {
+	transform: rotate(45deg);
+}
+
+.button--close span:last-child {
+	transform: rotate(-45deg);
 }
 
 .header_buttons .btn:not(:first-child) {
@@ -144,6 +204,7 @@ section {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	width: 100%;
 }
 
 .offer__info {
@@ -469,7 +530,7 @@ button[data-action="stop"] {
 }
 
 .fieldset__item:first-of-type {
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 }
 
 .fieldset__item:nth-of-type(2) {
@@ -489,6 +550,7 @@ button[data-action="stop"] {
 	height: 100%;
 	background: transparent;
 	outline: 0;
+	font-size: 14px;
 	border: 0;
 	z-index: 2;
 	position: relative;
@@ -497,17 +559,20 @@ button[data-action="stop"] {
 .callmeback textarea {
 	width: 100%;
 	height: 100%;
+	box-sizing: border-box;
+	padding: 5px 0 0;
 	border: 0;
-	padding: 0;
-	font-size: 16px;
+	font-size: 14px;
 	font-family: 'Signika Negative', sans-serif;
 	resize: none;
 }
 
 .callmeback input:focus~label,
-.callmeback input:focus~label {
+.callmeback input:focus~label,
+.callmeback input:valid~label,
+.callmeback input:valid~label {
 	font-size: 12px;
-	top: -10px;
+	top: -12px;
 }
 
 .callmeback textarea:focus {
@@ -518,7 +583,7 @@ button[data-action="stop"] {
 .callmeback textarea:valid~label,
 .callmeback textarea:focus~label {
 	font-size: 12px;
-	top: -15px;
+	top: -18px;
 }
 
 /*FOOTER*/
@@ -555,4 +620,101 @@ button[data-action="stop"] {
 
 .social__item:hover {
 	opacity: 0.8;
+}
+
+/* Style for modal */
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 6;
+	display: none;
+}
+
+.modal__wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 7;
+	background: rgba(41, 21, 21, 0.7);
+}
+
+.modal__box {
+	width: 100%;
+	max-width: 585px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 4px 15px rgba(41, 21, 21, 0.25);
+	border-radius: 10px;
+	z-index: 8;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 50px;
+	color: #000;
+}
+
+.modal__header {
+	line-height: 120%;
+	color: #291515;
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.modal__header h2 {
+	font-size: 36px;
+}
+
+.price__item {
+	min-height: 24px;
+	border-bottom: 2px solid #9E2D2D;
+	font-size: 18px;
+	line-height: 120%;
+	font-weight: bold;
+	color: #000;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.price__item:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.price__item--cut {
+	flex-direction: column;
+	border-bottom: none;
+}
+
+.price__item--cut .name {
+	border-bottom: 2px solid #9E2D2D;
+}
+
+#cutList {
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+#cutList div {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #9E2D2D;
+	width: calc( 100% - 20px );
+}
+
+#cutList div:not(:first-child) {
+	margin-top: 20px;
+}
+
+#cutList div span {
+	font-weight: normal;
 }
