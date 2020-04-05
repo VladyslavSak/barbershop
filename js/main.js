@@ -21,7 +21,7 @@ const barbersSlider = tns({
 *  Та функції для їх створення
  */
 modalInit('priceList', 'viewPrice');
-closeModal('priceList');
+// closeModal('priceList');
 
 //Функція для визову модального вікна
 function modalInit( modalID, trigger ) {
@@ -144,6 +144,7 @@ const priceList = [
 
 // Оголошуємо зміну, яка відповідає тілу нашого модального вікна
 const priceBody = document.getElementById('priceListBody');
+const selectList = document.getElementById('select_service');
 
 //В циклі виводимо наші дані із нашого об'єкту цін, та вставляємо код html на сторінку
 priceList.forEach( item => {
@@ -152,7 +153,6 @@ priceList.forEach( item => {
             '                <span class="name">'+ item.name +'</span>' +
             '                <div class="price__sub-list" id="cutList"></div>' +
             '            </div>';
-
         // Оголошуємо зміну, яка відповідає тілу списку типів зачісок
         const cutBody = document.getElementById('cutList');
 
@@ -168,6 +168,8 @@ priceList.forEach( item => {
             '   <span class="name">'+ item.name +'</span>' +
             '   <span class="price">'+ item.price +'</span>\n' +
             '</div>';
+
+        selectList.innerHTML += '<option value="'+ item.name +'">'+ item.name +'</option>';
     }
 });
 
