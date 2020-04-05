@@ -21,7 +21,9 @@ const barbersSlider = tns({
 *  Та функції для їх створення
  */
 modalInit('priceList', 'viewPrice');
-// closeModal('priceList');
+modalInit('servicesList', 'book');
+closeModal('priceList');
+closeModal('servicesList');
 
 //Функція для визову модального вікна
 function modalInit( modalID, trigger ) {
@@ -43,13 +45,11 @@ function modalInit( modalID, trigger ) {
 //Функція для зникнення модального вікна
 function closeModal ( modalID ) {
     //Оголошуємо наші елементи, що викликають зникнення вікна
-    const buttonTriggerOut = document.getElementsByClassName('button--close')[0];
-    const spanTrigger = document.getElementsByClassName('close-line')[0];
-    const spanTrigger2 = document.getElementsByClassName('close-line')[1];
-    const wrapperOut = document.getElementById(modalID).children[0];
-
-    //Оголошуємо наше модальне вікно
     const modal = document.getElementById(modalID);
+    const buttonTriggerOut = modal.children[1].children[2];
+    const spanTrigger = buttonTriggerOut.children[0];
+    const spanTrigger2 = buttonTriggerOut.children[1];
+    const wrapperOut = document.getElementById(modalID).children[0];
 
     document.addEventListener('click', function(event) {
        if ( event.target === buttonTriggerOut || event.target === wrapperOut || event.target === spanTrigger || event.target === spanTrigger2 ) {
