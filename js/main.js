@@ -21,25 +21,40 @@ const barbersSlider = tns({
 *  Та функції для їх створення
  */
 modalInit('priceList', 'viewPrice');
-modalInit('servicesList', 'book');
+modalInit('servicesList', '.btn__book', true);
 closeModal('priceList');
 closeModal('servicesList');
 
 //Функція для визову модального вікна
-function modalInit( modalID, trigger ) {
+function modalInit( modalID, trigger, multiply ) {
     //Оголошуємо нашу кнопку, що викликає модальне вікно
-    const buttonTrigger = document.getElementById(trigger);
+    let buttonTrigger;
 
     //Оголошуємо наше модальне вікно
     const modal = document.getElementById(modalID);
 
-    buttonTrigger.addEventListener('click', function() {
-        //Робимо неможливим гортання основного сайту
-        document.body.className = 'hidden';
+    if (multiply === true) {
+        buttonTrigger = document.querySelectorAll(trigger);
+        buttonTrigger.forEach(btn => {
+            btn.addEventListener('click', function () {
+                //Робимо неможливим гортання основного сайту
+                document.body.className = 'hidden';
 
-        //Плавне появлення для нашої форми
-       fadeIn(modal);
-    });
+                //Плавне появлення для нашої форми
+                fadeIn(modal);
+            });
+        })
+
+    } else {
+        buttonTrigger = document.getElementById(trigger);
+        buttonTrigger.addEventListener('click', function () {
+            //Робимо неможливим гортання основного сайту
+            document.body.className = 'hidden';
+
+            //Плавне появлення для нашої форми
+            fadeIn(modal);
+        });
+    }
 }
 
 //Функція для зникнення модального вікна
