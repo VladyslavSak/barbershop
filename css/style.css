@@ -567,6 +567,37 @@ button[data-action="stop"] {
 	transition: all .3s;
 }
 
+.fieldset__item--checkbox {
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.fieldset__item--checkbox input {
+	max-width: 24px;
+	min-height: 24px;
+	margin-right: 10px;
+	background: #FFFFFF;
+	border: 1px solid #291515;
+	box-sizing: border-box;
+	border-radius: 5px;
+	-webkit-appearance: none;
+}
+
+.fieldset__item--checkbox input:hover {
+	cursor: pointer;
+}
+
+.fieldset__item--checkbox input.active {
+	background: url('../image/check.svg') no-repeat center / 16px, #fff;
+}
+
+.fieldset__item--checkbox label {
+	position: relative;
+	font-size: 16px !important;
+	top: 0 !important;
+}
+
 input {
 	width: 100%;
 	min-height: 30px;
@@ -585,15 +616,16 @@ select {
 	-webkit-appearance: none;
 }
 
-input[type='time'],
-input[type='date'] {
+input[type='time'] {
 	opacity: 0;
 }
 
+input[type='number']::-webkit-inner-spin-button {
+	display: none;
+}
+
 input[type='time']:focus,
-input[type='time']:valid,
-input[type='date']:focus,
-input[type='date']:valid {
+input[type='time']:valid {
 	opacity: 1;
 }
 

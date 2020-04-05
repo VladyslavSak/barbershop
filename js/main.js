@@ -188,3 +188,15 @@ function showScrollButton() {
         buttonToTop.classList.remove('active');
     }
 }
+
+/*
+** Checkbox clicked action
+ */
+const checkbox = document.getElementById('checkbox');
+checkbox.addEventListener('click', function() {
+   if ( this.className === 'active' ) {
+       this.classList.remove('active');
+   } else {
+       this.classList.add('active');
+   }
+});

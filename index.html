@@ -36,11 +36,24 @@
 					</div>
 					<div class="fieldset__item fieldset__item--date">
 						<div class="day">
-							<input type="date" id="day" required>
+							<input type="number" id="day" required>
 							<label for="day">Day</label>
 						</div>
 						<div class="month">
-							<input type="date" id="month" required>
+							<select name="month" id="month">
+								<option value="January">January</option>
+								<option value="February">February</option>
+								<option value="March">March</option>
+								<option value="April" selected>April</option>
+								<option value="May">May</option>
+								<option value="June">June</option>
+								<option value="July">July</option>
+								<option value="August">August</option>
+								<option value="September">September</option>
+								<option value="October">October</option>
+								<option value="November">November</option>
+								<option value="December">December</option>
+							</select>
 							<label for="month">Month</label>
 						</div>
 					</div>
@@ -51,6 +64,10 @@
 					<div class="fieldset__item">
 						<textarea id="commentary" required></textarea>
 						<label for="commentary">Commentary</label>
+					</div>
+					<div class="fieldset__item--checkbox">
+						<input id="checkbox" type="checkbox" required>
+						<label for="checkbox">Don`t call me to confirm the entry</label>
 					</div>
 					<button type="submit" class="btn booknow__btn">Book now</button>
 				</form>
