@@ -567,7 +567,7 @@ button[data-action="stop"] {
 	transition: all .3s;
 }
 
-.callmeback input {
+input {
 	width: 100%;
 	height: 100%;
 	background: transparent;
@@ -578,7 +578,7 @@ button[data-action="stop"] {
 	position: relative;
 }
 
-.callmeback textarea {
+textarea {
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
@@ -589,21 +589,21 @@ button[data-action="stop"] {
 	resize: none;
 }
 
-.callmeback input:focus~label,
-.callmeback input:focus~label,
-.callmeback input:valid~label,
-.callmeback input:valid~label {
+input:focus~label,
+input:focus~label,
+input:valid~label,
+input:valid~label {
 	font-size: 12px;
 	top: -12px;
 }
 
-.callmeback textarea:focus {
+textarea:focus {
 	outline: 0;
 	border: 0;
 }
 
-.callmeback textarea:valid~label,
-.callmeback textarea:focus~label {
+textarea:valid~label,
+textarea:focus~label {
 	font-size: 12px;
 	top: -18px;
 }
