@@ -375,6 +375,16 @@ section {
 
 }
 
+.about__images video {
+	height: 100%;
+	max-height: 335px;
+	max-width: 540px;
+}
+
+.about__images video:focus {
+	outline: 0;
+}
+
 /*BARBERS*/
 .our_barbers {
 	background-color: #554646;

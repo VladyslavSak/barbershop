@@ -215,3 +215,11 @@ checkbox.addEventListener('click', function() {
        this.classList.add('active');
    }
 });
+
+/*
+** Alert init
+ */
+const callMeBackForm = document.getElementById('callMeBack');
+callMeBackForm.addEventListener('submit', function(){
+   alert('Thank you! We`ll call you back in 30 seconds');
+});
